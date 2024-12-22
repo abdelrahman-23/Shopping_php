@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../index.css">
+    <script src="../index.js"></script>
+    <style>
+        .cart-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f1f1ef;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cart-header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .cart-header .total {
+            font-size: 1.5em;
+            color: green;
+            font-weight: bold;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #f1f1ef;
+            border-radius: 10px;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .cart-item-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .cart-item-info h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .cart-item-info p {
+            margin: 5px 0;
+            color: gray;
+        }
+
+        .cart-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cart-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cart-actions .remove-btn {
+            background-color: red;
+            color: white;
+        }
+
+        .cart-actions .remove-btn:hover {
+            background-color: darkred;
+        }
+
+        .checkout-btn {
+            display: block;
+            margin: 20px auto;
+            background-color: green;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 40px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background-color: darkgreen;
+        }
+
+        .footer {
+            background-color: #232f3e;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .footer a:hover {
+            color: #56baed;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="navList">
+            <li class="navItem left"><a href="../../login/index.php">NILE</a></li>
+            <input type="text" id="searchbar" class="navItem searchbar" list="categories" placeholder="Search Nile.com...">
+            <button type="button" id="searchbutton" class="navItem left" onclick="searchbarfunc()">Go</button>
+            <li class="navItem right dropdown">
+                <a href="#">CATEGORIES ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="supermarket.html">Supermarket</a></li>
+                    <li><a href="phones.html">Phones & Tablets</a></li>
+                    <li><a href="laptops.html">Laptops & Desktops</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="baby.html">Baby Products</a></li>
+                </ul>
+            </li>
+            <li class="navItem right"><a href="cart.html">CART</a></li>
+            <li class="navItem right"><a href="../../login/logout.php">LOG OUT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cart Container -->
+    <div class="cart-container">
+        <div class="cart-header">
+            <h1>Your Cart</h1>
+            <div class="total">Total: $0.00</div>
+        </div>
+
+        <!-- Example Item -->
+        <div class="cart-item">
+            <img src="../photos/BabySleepFurPort.jpg" alt="Product">
+            <div class="cart-item-info">
+                <h3>Baby Sleep Fur Port</h3>
+                <p>Price: $150</p>
+            </div>
+            <div class="cart-actions">
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+
+        <form action="confirmation.php" method="POST">
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="aboutus.html">About us</a>
+    </div>
+
+</body>
+</html>

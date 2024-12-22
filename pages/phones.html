@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nile.com</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../index.css">
+        <script src="../index.js"></script>
+        <script src="../cart.js"></script>
+    </head>
+    <body>
+
+        <datalist id="categories">
+            <option value="Supermarket">
+            <option value="Phones & Tablets">
+            <option value="Laptops & Desktops">
+            <option value="Electronics">
+            <option value="Men's Fashion">
+            <option value="Furniture">
+            <option value="Baby Products">
+        </datalist>
+        <nav>
+            <ul class="navList" style="margin-bottom: 1px;">
+                <li class="navItem left"><a href="../../login/index.php">NILE</a></li>
+                <input type="text" id="searchbar" class="navItem searchbar" list="categories" placeholder="   Search Nile.com..." style="align-self: center; border-radius: 25px; border-color: black; border-width: 2px;"> 
+                <button type="button" id="searchbutton" class="navItem left" style="color: black; background-color:white; font-size: 2em; border-radius: 25px;"   onclick="searchbarfunc(this)">Go </button> 
+                <li class="navItem right dropdown">
+                    <a href="#">CATEGORIES ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="supermarket.html">SUPERMARKET</a></li>
+                        <li><a href="phones.html">PHONES & TABLETS</a></li>
+                        <li><a href="laptops.html">LAPTOPS & DESKTOPS</a></li>
+                        <li><a href="electronics.html">ELECTRONICS</a></li>
+                        <li><a href="fashion.html">FASHION</a></li>
+                        <li><a href="furniture.html">FURNITURE</a></li>
+                        <li><a href="baby.html">BABY PRODUCTS</a></li>
+                    </ul>
+                </li>
+                <li class="navItem right"><a href="../../login/cart.php">CART</a></li>
+                <li class="navItem right"><a href="../../login/logout.php">LOG OUT</a></li>
+            </ul>
+        </nav>
+
+        <div class="flexbox1">
+            <div class="flexbox-item">
+                <div class="image" style="height: 70%;">
+                    <img src="../photos/iPhone 13.png" height="100%" >
+                </div>
+                <div class="text">
+                    <h1 style="text-align: center;">iPhone 13</h1>
+                    <h1 style="display: inline; text-align: center; margin-left: 10px;">$500</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$1000</b></del></p>
+                    <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+                </div>
+            </div>
+
+
+            <div class="flexbox-item">
+                <div class="image" style="height: 70%;">
+                    <img src="../photos/iPhone 14.png" width="100%">
+
+                </div>
+                <div class="text">
+                    <h1 style="text-align: center;">iPhone 14 Pro</h1>
+                    <h1 style="display: inline; text-align: center; margin-left: 10px;">$750</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$1500</b></del></p>
+                    <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+                </div>
+            </div>
+
+            <div class="flexbox-item">
+                <div class="image" style="height: 70%;">
+                    <img src="../photos/S22 Ultra.png" width="100%">
+                </div>
+                <div class="text">
+                    <h1 style="text-align: center;">S22 Ultra</h1>
+                    <h1 style="display: inline; text-align: center; margin-left: 10px;">$625</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$1250</b></del></p>
+                    <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+                </div>
+            </div>
+            
+        </div>
+<div class="flexbox2">
+
+    <div class="flexbox-item">
+
+        <div class="image" style="height: 70%;">
+            <img src="../photos/iPhone X.png" width="100%">
+        </div>
+
+        <div class="text">
+            <h1 style="text-align: center;">iPhone X</h1>
+            <h1 style="display: inline; text-align: center; margin-left: 10px;">$1000</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$2000</b></del></p>
+            <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+        </div>
+
+    </div>
+
+    <div class="flexbox-item">
+
+        <div class="image" style="height: 70%;">
+            <img src="../photos/S21 Ultra.png" width="100%">
+        </div>
+
+        <div class="text">
+            <h1 style="text-align: center;">S21 Ultra</h1>
+            <h1 style="display: inline; text-align: center; margin-left: 10px;">$1125</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$2250</b></del></p>
+            <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+        </div>
+
+    </div>
+
+    <div class="flexbox-item">
+
+        <div class="image" style="height: 70%;">
+            <img src="../photos/One Plus.png" width="100%">
+        </div>
+
+        <div class="text">
+            <h1 style="text-align: center;">One Plus 9</h1>
+            <h1 style="display: inline; text-align: center; margin-left: 10px;">$750</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$1500</b></del></p>
+            <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+        </div>
+
+    </div>
+</div>
+
+<div class="flexbox3">
+    <div class="flexbox-item">
+
+        <div class="image" style="height: 70%;">
+            <img src="../photos/Xiaomi Mi 12.png" width="100%">
+        </div>
+
+        <div class="text">
+            <h1 style="text-align: center;">Xiaomi Mi 12</h1>
+            <h1 style="display: inline; text-align: center; margin-left: 10px;">$750</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$1500</b></del></p>
+            <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+        </div>
+
+    </div>
+
+    <div class="flexbox-item">
+
+        <div class="image" style="height: 70%;">
+            <img src="../photos/Galaxy Z Fold3 5G.png" width="100%">
+        </div>
+
+        <div class="text">
+            <h1 style="text-align: center;">Galaxy Fold 3</h1>
+            <h1 style="display: inline; text-align: center; margin-left: 10px;">$875</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$1750</b></del></p>
+            <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+        </div>
+
+    </div>
+
+    <div class="flexbox-item">
+
+        <div class="image" style="height: 70%;">
+            <img src="../photos/Galaxy Z Flip 3.png" width="100%">
+        </div>
+
+        <div class="text">
+            <h1 style="text-align: center;">Galaxy Flip 3</h1>
+            <h1 style="display: inline; text-align: center; margin-left: 10px;">$500</h1> <p style="display: inline; color: red; font-size: 1.5em; text-align: center;"><del><b>$1000</b></del></p>
+            <input type="image" class="button addToCart" src="../photos/3523865.png" style="height: 50px; width: 50px; float: right;" onclick="addToCart(this)">
+        </div>
+
+    </div>
+</div>
+       
+<div id="bottom">
+
+    <ul>
+        <li><a href="aboutus.html" style="color: white; font-size: 2em;">About us</a></li>
+        <li><a href="../../login/redeem.php" style="color: white; font-size: 2em;">Redeem</a></li>
+    </ul>
+
+</div>
+
+    </body>
+</html>

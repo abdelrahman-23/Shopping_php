@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Nile</title>
+    <link rel="stylesheet" href="../index.css">
+    <script src="../index.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        nav {
+            background-color: #232f3e;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navList {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navList a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .navList a:hover {
+            color: #00a8e8;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+            filter: brightness(60%);
+        }
+        .hero h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            margin: 0;
+        }
+        .content-section {
+            padding: 3rem;
+            text-align: center;
+        }
+        .content-section img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .content-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        .footer {
+            background-color: #232f3e;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .footer a {
+            color: #00a8e8;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="navList">
+            <li><a href="../../login/index.php">NILE</a></li>
+            <input type="text" id="searchbar" list="categories" placeholder="Search Nile.com..." style="padding: 10px; border-radius: 25px; border: none; font-size: 1rem;">
+            <button onclick="searchbarfunc()" style="padding: 10px 20px; border-radius: 25px; background-color: #00a8e8; color: white; border: none; cursor: pointer;">Go</button>
+            <li class="dropdown">
+                <a href="#">CATEGORIES &#9662;</a>
+                <ul class="dropdown-content">
+                    <li><a href="supermarket.html">Supermarket</a></li>
+                    <li><a href="phones.html">Phones & Tablets</a></li>
+                    <li><a href="laptops.html">Laptops & Desktops</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="fashion.html">Fashion</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="baby.html">Baby Products</a></li>
+                </ul>
+            </li>
+            <li><a href="../../login/cart.php">CART</a></li>
+            <li><a href="../../login/logout.php">LOG OUT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <img src="../photos/Shopping.png" alt="Shopping">
+        <h1>About Nile</h1>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="content-section">
+        <img src="../photos/NileShirt.png" alt="Nile Merchandise">
+        <p>
+            Nile is guided by four principles: customer obsession rather than competitor focus, passion for invention,
+            commitment to operational excellence, and long-term thinking. Nile strives to be Earth’s most customer-centric
+            company, Earth’s best employer, and Earth’s safest place to work.
+        </p>
+    </div>
+
+    <div class="content-section">
+        <img src="../photos/NilePhone.png" alt="Nile Phone">
+    </div>
+
+    <div class="content-section">
+        <img src="../photos/NileLaptop.png" alt="Nile Laptop">
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Nile. All Rights Reserved. | <a href="../../login/redeem.php">Redeem Gift Cards</a></p>
+    </div>
+</body>
+</html>
